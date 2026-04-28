@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question for you ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+
+    #yes {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+
+    #no {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Do you want to be with me? ❤️</h1>
+
+  <button id="yes">Yes</button>
+  <button id="no">No</button>
+
+  <script>
+    let yesBtn = document.getElementById("yes");
+    let noBtn = document.getElementById("no");
+
+    let size = 20;
+
+    noBtn.onclick = function() {
+      size += 10;
+      yesBtn.style.fontSize = size + "px";
+      yesBtn.style.padding = (size/2) + "px";
+
+      // optional: move NO button randomly 😈
+      noBtn.style.position = "absolute";
+      noBtn.style.left = Math.random() * window.innerWidth + "px";
+      noBtn.style.top = Math.random() * window.innerHeight + "px";
+    };
+
+    yesBtn.onclick = function() {
+      document.body.innerHTML = "<h1>Yaaaay 😍❤️</h1><p>Best decision ever 😌</p>";
+    };
+  </script>
+
+</body>
+</html>
